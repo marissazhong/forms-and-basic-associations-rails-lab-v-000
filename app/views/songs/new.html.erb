@@ -9,9 +9,9 @@
 
   <%= f.collection_select :genre, Genre.all, :id, :name %>
 
-  <input name="category[post_ids][]" id="song_notes_1">
-  <input name="category[post_ids][]" id="song_notes_2">
-  <input name="category[post_ids][]" id="song_notes_3">
+  <input name="category[song_note_ids][]" id="song_notes_1">
+  <input name="category[song_note_ids][]" id="song_notes_2">
+  <input name="category[song_note_ids][]" id="song_notes_3">
 
   <%= f.submit %>
 <% end %>
