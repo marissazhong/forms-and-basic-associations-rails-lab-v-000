@@ -13,7 +13,12 @@ class SongsController < ApplicationController
 
   def create
     @song = Song.create(song_params)
-    redirect_to controller: 'songs', action: 'index'
+
+    if @song.save
+      redirect_to @song
+    else
+      render :new
+    end
   end
 
   def edit
