@@ -24,4 +24,9 @@ class Song < ActiveRecord::Base
       note = Note.find(id)
       self.notes << note
     end
+  end
+
+  def note_contents
+    self.notes
+  end
 end
